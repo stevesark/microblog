@@ -1,0 +1,34 @@
+
+        // openid requires username
+        <a href="javascript:set_openid('{{pr.url}}', '{{pr.name}}');">{{pr.name}}</a> |
+        <span style="color: red;">[{{error}}]</span>
+        openid = openid.substr(0, u) + user
+        Please enter your OpenID, or select one of the providers below:<br>
+        user = prompt('Enter your ' + pr + ' username:')
+        {% endfor %}
+        {% endfor %}<br>
+        {% for error in form.errors.openid %}
+        {{form.openid(size=80)}}
+        |{% for pr in providers %}
+    </p>
+    <p>
+    <p><input type="submit" value="Sign In"></p>
+    <p>{{form.remember_me}} Remember Me</p>
+    form = document.forms['login'];
+    form.elements['openid'].value = openid
+    if (u != -1) {
+    u = openid.search('<username>')
+    {{form.hidden_tag()}}
+    }
+<!-- extend base layout -->
+</form>
+</script>
+<form action="" method="post" name="login">
+<h1>Sign In</h1>
+<script type="text/javascript">
+function set_openid(openid, pr)
+{
+{% block content %}
+{% endblock %}
+{% extends "base.html" %}
+}
