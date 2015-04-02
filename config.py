@@ -21,8 +21,8 @@ MAIL_SERVER = 'smtp.googlemail.com' #'localhost'
 MAIL_PORT = 465 #25
 MAIL_USE_TLS = False
 MAIL_USE_SSL = True
-MAIL_USERNAME = '' #None
-MAIL_PASSWORD = ''# None
+MAIL_USERNAME = '' #Your mail login
+MAIL_PASSWORD = ''# Pass
 
 # administrator list
 ADMINS = ['krasnovetskiy@yahoo.com']

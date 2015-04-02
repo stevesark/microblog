@@ -32,7 +32,7 @@ def index(page = 1):
         db.session.commit()
         flash('Your post is now live!')
         return redirect(url_for('index'))
-    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)   
+    posts = g.user.followed_posts().paginate(page, POSTS_PER_PAGE, False)
     return render_template('index.html',
         title = 'Home',
         form = form,
@@ -84,7 +84,7 @@ def logout():
 @app.route('/user/<nickname>')
 @app.route('/user/<nickname>/<int:page>')
 @login_required
-def user(nickname, page = 1): 
+def user(nickname, page = 1):
     user = User.query.filter_by(nickname = nickname).first()
     if user == None:
         flash('User ' + nickname + ' not found.')
@@ -137,7 +137,7 @@ def follow(nickname):
     db.session.add(u)
     db.session.commit()
     flash('You are now following ' + nickname + '!')
-    # follower_notification(user, g.user)
+    follower_notification(user, g.user)
     return redirect(url_for('user', nickname = nickname))
 
 @app.route('/unfollow/<nickname>')
