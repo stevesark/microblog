@@ -1,6 +1,7 @@
 *.pyc
 *.pyo
-#app.db
-#search.db
+app.db
+search.db
 venv
+*.mo
 
