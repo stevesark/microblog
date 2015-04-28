@@ -26,3 +26,4 @@ speaklater==1.3
 sqlalchemy-migrate
 sqlparse==0.1.14
 wsgiref==0.1.2
+guess-language
